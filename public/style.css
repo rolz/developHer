@@ -1,0 +1,70 @@
+/* CSS declarations go here */
+
+@font-face {
+    font-family: 'Dyn';
+    src: url('font/DIN_Condensed_Bold.ttf');
+    font-weight:bold;
+}
+
+.login-text-and-button{
+    position:absolute;
+     width:300px;
+     height:200px;
+     z-index:15;
+     top:900px;
+     left:50%;
+     margin:-100px 0 0 -150px;
+     text-align: center;
+}
+
+
+.hero-image {
+    width: 100%;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+}
+.repo-box {
+    position: relative;
+    margin: auto;
+}
+
+.repo-box table {
+    margin-top: 50px;
+}
+
+.row-header td {
+    border-bottom:1pt solid black;
+    padding-bottom: 20px;
+}
+
+.row-container td {
+    border-bottom:1pt solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Helvetica';
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.repo-title {
+    font-family: Dyn;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.other-titles {
+    font-family: 'Helvetica';
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.github-login{
+
+}
+
+.paypal-login {
+
+}

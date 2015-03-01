@@ -1,0 +1,56 @@
+<!Doctype>
+<html>
+
+<head>
+    <script charset="utf-8" src="https://code.jquery.com/jquery-2.1.3.js">
+
+    </script>
+    <script charset="utf-8" src="/socket.io/socket.io.js"></script>
+    <script charset="utf-8">
+        var socket = io.connect();
+        socket.on('hook', function (data) {
+            var commits = $('#'+data.repo+" > .commits");
+
+            count = parseInt(commits.text())+1;
+
+            commits.text(count);
+
+            var pledge = $('#'+data.repo+" > .pledge");
+
+            pledge.text("$ "+count/100)
+            
+        });
+
+
+    </script>
+</head>
+<body>
+
+    <div><a href="/login">Login</a></div>
+    <div class="hero-image">
+        <img src="images/Hero.png">
+    </div>
+
+    <div class="repo-box">
+        <table style="width:80%">
+
+            <tr class="row-header">
+                <td class="repo-title">My Repositories</td>
+                <td class="other-titles">Commits</td>
+                <td class="other-titles">Pledged</td>
+            </tr>
+
+            {{#each repos}}
+
+            <tr id={{name}} class="row-container">
+                <td>{{name}}</td>
+                <td class="commits">0</td>
+                <td class="pledge">$</td>
+            </tr>
+
+            {{/each}}
+
+        </table>
+    </div>
+</body>
+</html>
